@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('cars', 'CarsController');
+Route::resource('profiles', 'ProfilesController');
+Route::resource('services', 'ServicesController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

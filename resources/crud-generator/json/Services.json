@@ -1,0 +1,25 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "distance",
+            "type": "string"
+        },
+        {
+            "name": "cost",
+            "type": "string"
+        },
+        {
+            "name": "remake",
+            "type": "text"
+        },
+        {
+            "name": "car_id",
+            "type": "integer#unsigned"
+        }
+    ]
+}
+

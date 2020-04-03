@@ -1,0 +1,39 @@
+{
+    "fields": [
+        {
+            "name": "car_model",
+            "type": "string"
+        },
+        {
+            "name": "body_car",
+            "type": "string"
+        },
+        {
+            "name": "rg_number",
+            "type": "string"
+        },
+        {
+            "name": "car_color",
+            "type": "select",
+            "options": {
+                "colorred": "สีแดง",
+                "colorblack": "สีดำ",
+                "colorgray": "สีเทา",
+                "colorwhite":"สีขาว"
+            }
+        },
+        {
+            "name": "offtion",
+            "type": "string"
+        },
+        {
+            "name": "vg_number",
+            "type": "string"
+        },
+        {
+            "name": "user_id",
+            "type": "integer#unsigned"
+        }
+    ]
+}
+
