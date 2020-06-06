@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Profile;
-use Illuminate\Support\Facades\Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -24,17 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $profile = Profile::firstOrCreate(
-            ['user_id' => Auth::id()],
-            ['role' => 'guest']
-        );
-        
-        if(Auth::user()->profile->role == "admin"){
-            return redirect("/profiles");
-        }else if(Auth::user()->profile->role == "guest"){
-                return redirect("/cars");
-        }
-    
-        return view('home', compact('profile'));
+        return view('home');
     }
 }
