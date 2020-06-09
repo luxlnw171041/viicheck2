@@ -41,22 +41,34 @@
                               <h4><br></h4>
                             </div>
                           </div>
-
-                          
-                          
                     </section><!-- End Hero -->
+            </div>
 
-                  
+            <hr>
 
-                     
-                  </div>
-                </div>
+            <div class="card" style="border: 0px">
 
-        </div>
+              <section style="background: #FFCC33;width: 80%">
 
-        <div class="card" style="border: 5px">
-            
+                    <div style="position:absolute; margin-left:700px">
+                      <iframe width="570" height="320"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+                        </iframe>
+                    </div>  
+
+                    <div class="col-md-8" ><br>
+                      <div>โควิด-19 (COVID-19)</div>
+                        <h1><b>การสนับสนุนกลุ่มสมาชิกของเรา</b></h1><br>
+                        <h3>ในขณะที่โลกพยายามก้าวข้ามความท้าทายที่โคโรน่าไวรัสนำมา WeWork ยังคงมุ่งมั่นที่จะสนับสนุนพนักงานและบริษัทที่เป็นสมาชิกของเรา ซึ่งหลายแห่งก็กำลังทำงานอย่างหนักเพื่อช่วยให้ผู้คนปลอดภัย แข็งแรง และเชื่อมต่อผู้คนเข้าด้วยกัน</h3><br>
+                        <div>
+                          <a aria-label="อ่านเพิ่มเติมเกี่ยวกับมาตรการตอบสนองของ WeWork" class="ray-link ray-link--with-arrow" href="https://www.wework.com/info/navigating-the-future-of-the-workplace">อ่านเพิ่มเติมเกี่ยวกับมาตรการตอบสนองของ WeWork</a>
+                        </div><br>
+                    </div>
+              </section><!-- End Hero -->
+
+            </div>
         </div>
     </div>
-</div>
+
+    </div>
 @endsection
