@@ -76,8 +76,7 @@
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="col-lg-6 text-lg-left text-center">
-          <div class="copyright">
-            &copy;  <strong>Viicheck 2</strong>
+          <div class="copyright"> <strong>Viicheck 2</strong>
           </div>
           
         </div>

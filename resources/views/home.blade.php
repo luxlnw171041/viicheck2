@@ -5,50 +5,57 @@
     <div class="row justify-content-center">
         <div class="col-md-16">
             <div class="card" style="border: 0px">
-            <section id="hero" class="d-flex align-items-center">
 
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-4 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                      <h2 data-aos="fade-up"><b>ปฏิวัติพื้นที่ทำงานของคุณ</b></h2>
-                      <p data-aos="fade-up" data-aos-delay="400">ไม่ว่าคุณจะเป็นองค์กรที่มีรากฐานมั่นคงแล้วหรือสตาร์ทอัพที่กำลังโต ลองมาสำรวจพื้นที่ที่จะสร้างแรงบันดาลใจให้คุณสร้างสรรค์ผลงานที่สร้างผลกระทบที่สุด</p>
-                      <br>
+                    <section id="hero" class="d-flex align-items-center">
 
-                      <div data-aos="fade-up" data-aos-delay="800">
-                        <a href="#" class="btn-get-started scrollto">เริ่มต้น</a>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-8 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
-                        
-                        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-interval="10000">
-                              <img src="storage/app/public/portfolio-1.jpg" class="d-block w-100" alt="...">
+                          <div id="carouselExampleIndicators" class="carousel slide col-md-12" style="margin-left:200px;" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="https://ctfassets.imgix.net/vh7r69kgcki3/eXWPjvkhJLHlYF4UXJUwq/bed3e8b3958db9ecff7aed8736af0573/Web_150DPI-20191213_WeWork_One_Seaport_Square_Boston_004.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1096&amp;h=617" alt="" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://ctfassets.imgix.net/vh7r69kgcki3/4Dab4DLfemWorHT001bYeT/51663d4ffca4d876ef69c57011231bd4/3_Web_150DPI-20180808_WeWork_Ponce_De_Leon_-_Art__Murals_and_Details-1.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1096&amp;h=617" alt="homepage hero 2">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://ctfassets.imgix.net/vh7r69kgcki3/1PqMvOJcBvq88GvdCoKHFg/49779864d704427e0de36a4544fc9512/2_Web_150DPI-20180607_WeWork_92_Champs-E__lyse__es_-_Common_Areas_-_Couch_Area-2.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1096&amp;h=617" alt="homepage hero 3">
+                              </div>
                             </div>
-                            <div class="carousel-item" data-interval="2000">
-                              <img src="..." class="d-block w-100" alt="...">
+                            
+                          </div>
+
+                          <div class="col-md-4" style="position:absolute; background: #fff;">
+                            <div>
+                              <h5></h5>
                             </div>
-                            <div class="carousel-item">
-                              <img src="..." class="d-block w-100" alt="...">
+                            <h1 data-aos="fade-up"><br><b>ปฏิวัติพื้นที่ทำงานของคุณ</b></h1>
+                            <h5 data-aos="fade-up" data-aos-delay="400">ไม่ว่าคุณจะเป็นองค์กรที่มีรากฐานมั่นคงแล้วหรือสตาร์ทอัพที่กำลังโต ลองมาสำรวจพื้นที่ที่จะสร้างแรงบันดาลใจให้คุณสร้างสรรค์ผลงานที่สร้างผลกระทบที่สุด</h5>
+                            <div data-aos="fade-up" data-aos-delay="800">
+                              <a href="" class="btn-get-started scrollto">เริ่มต้น</a>
+                            </div>
+                            <div>
+                              <h4><br></h4>
                             </div>
                           </div>
-                          <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                          </a>
-                          <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                          </a>
-                        </div>
 
-                    </div>
+                          
+                          
+                    </section><!-- End Hero -->
+
+                  
+
+                     
                   </div>
                 </div>
 
-            </section><!-- End Hero -->
         </div>
+
+        <div class="card" style="border: 5px">
+            
         </div>
     </div>
 </div>
