@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::resource('cars', 'CarsController');
 Route::resource('profiles', 'ProfilesController');
@@ -24,3 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/b', function () {
+    return view('b');
+});
