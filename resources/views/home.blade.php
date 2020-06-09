@@ -48,10 +48,10 @@
 
             <div class="card" style="border: 0px">
 
-              <section style="background: #FFCC33;width: 80%">
+              <section style="background: #ffc64a;width: 80%">
 
-                    <div style="position:absolute; margin-left:700px">
-                      <iframe width="570" height="320"
+                    <div style="position:absolute; margin-left:700px;">
+                      <iframe style="background-color: #8e8e8e;border: 0px solid #424242;border-radius: 5px;" width="570" height="320"
                         src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
                         </iframe>
                     </div>  
