@@ -74,7 +74,7 @@
             		</div>
 
             		<div class="col-md-5">
-            			<iframe src="..."></iframe>
+            			@include('map')
             		</div>
             	</div>
             </div>

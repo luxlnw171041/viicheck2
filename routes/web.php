@@ -28,3 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/b', function () {
     return view('b');
 });
+
+Route::get('/c', function () {
+    return view('c');
+});
