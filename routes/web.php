@@ -32,3 +32,7 @@ Route::get('/b', function () {
 Route::get('/c', function () {
     return view('c');
 });
+
+Route::get('/d', function () {
+    return view('d');
+});
