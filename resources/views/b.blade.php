@@ -13,7 +13,7 @@
             		</div>
 
             		<div class="col-md-8">
-            			<input class="btn btn-primary" type="button" value="1" onclick=""> &nbsp;
+            			<button type="button" class="btn btn-primary" onclick=""><i class="icofont-ui-user"> &nbsp;1</i></button> &nbsp;
 						<input class="btn btn-outline-primary" type="button" value="ย้ายเข้า" onclick="">
             		</div>
             	</div>

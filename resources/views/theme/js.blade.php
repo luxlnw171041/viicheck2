@@ -9,6 +9,7 @@
   <script src="{{ asset('vendor/venobox/venobox.min.js') }}"></script>
   <script src="{{ asset('vendor/aos/aos.js') }}"></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js'></script>
+  
 
   <!-- Template Main JS File -->
   <script src="{{ asset('js/main.js') }}"></script>

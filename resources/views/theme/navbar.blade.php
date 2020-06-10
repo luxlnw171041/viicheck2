@@ -16,7 +16,7 @@
           <li><a href="">แนวคิด</a></li>
           
           <li><a href="">ติดต่อเรา</a></li>
-          <li class="get-started"><a href="">ลงชื่อเข้าใช้</a></li>
+          <li class="get-started"><a href="">ลงชื่อเข้าใช้ &nbsp; <i class="icofont-ui-user"></i></a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
