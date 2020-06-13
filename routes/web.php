@@ -15,6 +15,11 @@ Route::get('/', function () {
     
     return view('home');
 });
+Route::get('/welcome', function () {
+    
+    return view('welcome');
+});
+
 Route::resource('cars', 'CarsController');
 Route::resource('profiles', 'ProfilesController');
 Route::resource('services', 'ServicesController');
@@ -36,4 +41,9 @@ Route::get('/c', function () {
 
 Route::get('/d', function () {
     return view('d');
+});
+
+
+Route::get('/map', function () {
+    return view('map');
 });

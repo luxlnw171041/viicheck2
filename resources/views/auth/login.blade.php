@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="text-center"><br><img width="200px" height="200"  src="{{ url('images/logo.jpg') }}" alt="" class="img-fluid"><br></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
