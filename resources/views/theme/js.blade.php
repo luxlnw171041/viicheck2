@@ -10,8 +10,8 @@
   <script src="{{ asset('vendor/aos/aos.js') }}"></script>
 
   <!-- OwlCarousel2 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 
   <!-- Template Main JS File -->
   <script src="{{ asset('js/main.js') }}"></script>
+  <script src="{{ asset('js/app.js') }}"></script>

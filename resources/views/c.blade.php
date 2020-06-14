@@ -25,28 +25,28 @@
 	        <div class="col-md-8">
 	        	<div class="row"><br><br>
 
-		        	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-					  <div class="carousel-inner">
-					    <div class="carousel-item active">
-					      <img class="d-block w-100" src="https://locations-api-production.imgix.net/locations/image/4b90a2cc-2d78-11ea-988f-1214a1ac73cf/Web_150DPI-20190723_WeWork_Seolleung_III_21.jpg?auto=format%20compress&fit=crop&q=50&w=1200&h=675" alt="First slide">
-					    </div>
-					    <div class="carousel-item">
-					      <img class="d-block w-100" src="https://locations-api-production.imgix.net/locations/image/4ba91cc6-2d78-11ea-988f-1214a1ac73cf/Web_150DPI-20190611_WeWork_Yeoksam_Station_II_7.jpg?auto=format%20compress&fit=crop&q=50&w=1200&h=675" alt="Second slide">
-					    </div>
-					    <div class="carousel-item">
-					      <img class="d-block w-100" src="https://locations-api-production.imgix.net/locations/image/4bc41e36-2d78-11ea-988f-1214a1ac73cf/Web_150DPI-20180608_WeWork_Nanjing_Xi_Lu_-_Kitchens-2.jpg?auto=format%20compress&fit=crop&q=50&w=1200&h=675" alt="Third slide">
-					    </div>
-					  </div>
-					  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					    <span class="sr-only">Previous</span>
-					  </a>
-					  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-					    <span class="sr-only">Next</span>
-					  </a>
-					</div>
-
+	        		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="https://locations-api-production.imgix.net/locations/image/4b90a2cc-2d78-11ea-988f-1214a1ac73cf/Web_150DPI-20190723_WeWork_Seolleung_III_21.jpg?auto=format%20compress&fit=crop&q=50&w=1200&h=675" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://locations-api-production.imgix.net/locations/image/4ba91cc6-2d78-11ea-988f-1214a1ac73cf/Web_150DPI-20190611_WeWork_Yeoksam_Station_II_7.jpg?auto=format%20compress&fit=crop&q=50&w=1200&h=675" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://locations-api-production.imgix.net/locations/image/4bc41e36-2d78-11ea-988f-1214a1ac73cf/Web_150DPI-20180608_WeWork_Nanjing_Xi_Lu_-_Kitchens-2.jpg?auto=format%20compress&fit=crop&q=50&w=1200&h=675" alt="Third slide">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+	        		
 	        	</div>
 	        </div>
 	    </div>
