@@ -52,3 +52,5 @@ Route::get('/d', function () {
 Route::get('/map', function () {
     return view('map');
 });
+
+Route::resource('dealers', 'DealersController');
