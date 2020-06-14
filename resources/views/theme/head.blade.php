@@ -20,10 +20,6 @@
   <link href="{{ asset('vendor/venobox/venobox.css') }}" rel="stylesheet">
   <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
 
-  <!-- OwlCarousel2 -->
-  <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
-
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
