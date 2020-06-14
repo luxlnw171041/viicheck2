@@ -12,6 +12,7 @@
       <div id="wrapper"> 
         @include('theme.sidebar')
         <div class="container-fluid pt-5 pb-5 mb-5">
+          <br><br>
           @yield('content')          
         </div>
       </div>
