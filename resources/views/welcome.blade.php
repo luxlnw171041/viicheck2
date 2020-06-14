@@ -76,10 +76,13 @@
                                 @auth
                                     <a href="{{ url('/home') }}">หน้าแรก</a>
                                 @else
+                                    <a href="{{ url('/') }}">หน้าแรก</a>
+
                                     <a href="{{ route('login') }}">ลงชื่อเข้าใช้</a>
 
                                     @if (Route::has('register'))
                                         <a href="{{ route('register') }}">สมัครสมาชิก</a>
+                                    
                                     @endif
                                 @endauth
                             </div>
