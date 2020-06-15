@@ -10,18 +10,16 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-6">
-                                <h1>Spring Tower</h1>
+                                <h1>{{ $dealer->name_dealers }}</h1>
                                 <i class="icofont-star" style="color: #FF0033"></i> 5.0 &nbsp;|&nbsp; 0 reviews             
                             </div>
-
-                            <div class="col-md-6" style="text-align: right;">
-                                <span>Phayathai Rd<br>
-                                Khwaeng Thung Phaya Thai, Khet Ratchathewi<br>
-                                Bangkok 10400</span>
+                            <div class="col-md-2" style="text-align: right;"></div>
+                            <div class="col-md-4" style="text-align: right;">
+                                <span>{{ $dealer->location }}</span>
                             </div>
                         </div>
                     </div>
-                </div><br><br><br>
+                </div>
 
                 <div class="container">
                     <div class="col-md-8">
@@ -58,7 +56,7 @@
 
                             <div><br><br>
                                 <h1>ตำแหน่ง</h1>
-                                Phayathai Rd Khwaeng Thung Phaya Thai, Khet Ratchathewi Bangkok 10400
+                                {{ $dealer->location }}
                                 <br>
                             </div>
                     </div>
@@ -68,6 +66,7 @@
                     <div class="col-md-8">
                             <div><p></p></div>
                             <div style="height: 400px;">
+                                <br>
                                 @include('map')
                             </div>
                             <div><p></p></div>
@@ -81,7 +80,7 @@
 
 
 
-                <div class="card">
+                <!-- <div class="card d-none">
                     <div class="card-header">Dealer {{ $dealer->id }}</div>
                     <div class="card-body">
 
@@ -149,7 +148,7 @@
 
                     </div>
                 </div>
-
+ -->
 
             </div>
         </div>

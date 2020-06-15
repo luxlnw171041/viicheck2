@@ -67,9 +67,10 @@
                                                 @else
                                                 @endif
                                             </div>
+                                            <div><br><br>
                                                 <b>สถานที่ตั้ง</b> : {{ $item->location }} <br>
-                                                <p><b>latitude</b> : {{ $item->latitude }}   <b> longitude</b> : {{ $item->longitude }}</p>
-                                            
+                                                <p class="d-none"><b>latitude</b> : {{ $item->latitude }} <br>  <b> longitude</b> : {{ $item->longitude }}</p>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
