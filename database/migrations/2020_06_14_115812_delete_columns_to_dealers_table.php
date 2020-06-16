@@ -14,7 +14,7 @@ class DeleteColumnsToDealersTable extends Migration
     public function up()
     {
         Schema::table('dealers', function (Blueprint $table) {
-            $table->dropColumn('dealer');
+            $table->dropColumn('dealers');
             $table->dropColumn('pickup_and_multipurpose');
             $table->dropColumn('paint_and_body');
         });

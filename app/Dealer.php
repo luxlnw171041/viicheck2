@@ -25,7 +25,7 @@ class Dealer extends Model
      *
      * @var array
      */
-    protected $fillable = ['name_dealers', 'province', 'dealers', 'isuzu_all', 'pickup_and_multipurpose', 'paint_and_body', 'location', 'latitude', 'longitude', 'image'];
+    protected $fillable = ['name_dealers', 'province', 'dealer', 'isuzu_all', 'pickup_and_multipurpose', 'paint_and_body', 'location', 'latitude', 'longitude', 'image'];
 
     
 }
