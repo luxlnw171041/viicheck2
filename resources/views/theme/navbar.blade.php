@@ -12,7 +12,7 @@
       <nav class="nav-menu nav-a d-none d-lg-block">
           @auth
               <ul>
-                <li><a href="">ตำแหน่งที่ตั้ง</a></li>
+                <li><a href="{{ url('dealers') }}">ตำแหน่งที่ตั้ง</a></li>
                 <li><a href="">พื้นที่ทำงาน</a></li>
                 <li><a href="">องค์กร</a></li>
                 <li><a href="">แนวคิด</a></li>
