@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-16">
+        <div class="col-md-12">
             <div class="card" style="border: 0px">
 
                     <section id="hero" class="d-flex align-items-center">
@@ -32,8 +32,14 @@
                             <div>
                               <h5></h5>
                             </div>
-                            <h1 data-aos="fade-up"><br><b>ปฏิวัติพื้นที่ทำงานของคุณ</b></h1>
-                            <h5 data-aos="fade-up" data-aos-delay="400">ไม่ว่าคุณจะเป็นองค์กรที่มีรากฐานมั่นคงแล้วหรือสตาร์ทอัพที่กำลังโต ลองมาสำรวจพื้นที่ที่จะสร้างแรงบันดาลใจให้คุณสร้างสรรค์ผลงานที่สร้างผลกระทบที่สุด</h5>
+                            <h1 data-aos="fade-up"><br><b>ปฏิวัติการจัดเก็บข้อมูลของยานพาหนะคุณ</b></h1>
+                            <h5 data-aos="fade-up" data-aos-delay="400">ไม่ว่าคุณจะเป็นองค์กรบริษัทหรือบุคคลทั่วไปพี่อยากมีการจัดเก็บข้อมูลของยานพาหนะที่ได้มาตรฐาน ที่ทำให้ชีวิตของคุณง่ายสะดวกรวดเร็ว ทั้งหมดอยู่ที่นี่แล้ว</h5>
+                            <div class="">
+                              <label>ค้นหาศูนย์บริการที่ใกล้คุณ</label>
+                              <select class="form-control">
+                                <option>กรุงเทพ</option>
+                              </select>
+                            </div>
                             <div data-aos="fade-up" data-aos-delay="800"><br>
                               <a href="" class="btn-get-started scrollto">เริ่มต้น</a>
                             </div>
@@ -50,16 +56,16 @@
 
               <section style="background: #ffc64a;width: 80%">
 
-                    <div style="position:absolute; margin-left:700px;">
+                    <div style="position:absolute; right:0;">
                       <iframe style="background-color: #8e8e8e;border: 0px solid #424242;border-radius: 5px;" width="570" height="320"
                         src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
                         </iframe>
                     </div>  
 
-                    <div class="col-md-8" ><br>
+                    <div class="col-md-7" ><br>
                       <div>โควิด-19 (COVID-19)</div>
                         <h1><b>การสนับสนุนกลุ่มสมาชิกของเรา</b></h1><br>
-                        <h3>ในขณะที่โลกพยายามก้าวข้ามความท้าทายที่โคโรน่าไวรัสนำมา WeWork ยังคงมุ่งมั่นที่จะสนับสนุนพนักงานและบริษัทที่เป็นสมาชิกของเรา ซึ่งหลายแห่งก็กำลังทำงานอย่างหนักเพื่อช่วยให้ผู้คนปลอดภัย แข็งแรง และเชื่อมต่อผู้คนเข้าด้วยกัน</h3><br>
+                        <h3>ในขณะที่โลกพยายามปรับตัวและแก้ไขปัญหา Coronavirus <br>Viicheck ยังคงมุ่งมั่นที่จะสนับสนุนองค์กรบริษัทและทุกคนที่เป็นสมาชิกของเรา ซึ่งเราทำงานอย่างขันแข็งเพื่อให้ปลอดภัย แข็งแรงและเชื่อมต่อข้อมูลของยานพาหนะทุกคนเข้าด้วยกัน</h3><br>
                         <div>
                           <a aria-label="อ่านเพิ่มเติมเกี่ยวกับมาตรการตอบสนองของ WeWork" class="ray-link ray-link--with-arrow" href="https://www.wework.com/info/navigating-the-future-of-the-workplace">อ่านเพิ่มเติมเกี่ยวกับมาตรการตอบสนองของ WeWork</a>
                         </div><br>
@@ -111,7 +117,7 @@
                     </div>
                   </div>
 
-                  <div class="card" style="width: 18rem;position:absolute; margin-left:1020px;border: 1px solid #DCDCDC;border-radius: 5px;">
+                  <div class="card d-none" style="width: 18rem;position:absolute; margin-left:1020px;border: 1px solid #DCDCDC;border-radius: 5px;">
                     <img src="https://ctfassets.imgix.net/vh7r69kgcki3/2I0PdTXSFMaGjVzDOkwA9p/acfb401bf1b74cfbabed6cf2d222f19b/Web_150DPI-20190723_WeWork_Seolleung_III_12.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1000&amp;h=563" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h4 class="card-title"><a href=""> ห้องชุดสำนักงาน</a></h4>
@@ -120,9 +126,9 @@
                   </div>
 
                 <div class="col-md-3" ><br>
-                    <h2><b>การออกแบบที่ตอบสนองความต้องการอย่างครบครัน</b></h2><br>
+                    <h2><b>การใส่ใจในการซ่อมบำรุงและดูแลลูกค้าอย่างครบครัน</b></h2><br>
                     <div>
-                      <p>สถานที่ทำงานร่วมกันคือผลงานที่เราบรรจงสร้างสรรค์ เราพร้อมให้บริการพื้นที่ที่เหมาะกับคุณ ตั้งแต่สำนักงานส่วนตัวไปจนถึงสำนักงานใหญ่ที่พรั่งพร้อม</p>
+                      <p>ศูนย์บริการที่ทำงานร่วมกับเราเตรียมพร้อมเพื่อการพัฒนาปรับปรุงพื้นที่ให้เหมาะสำหรับทุกๆคนตั้งแต่ในส่วนของศูนย์ให้บริการพื้นที่รับรองรวมไปถึงเทคโนโลยีต่างๆเพื่อรองรับการใช้บริการอย่างมีประสิทธิภาพ</p>
                     </div>
                     <div>
                       <a href="">ดูโซลูชันทั้งหมด</a>
@@ -151,11 +157,11 @@
                     <div class="col-md-6">
                       <div>
                         <div>
-                          <img width="75" height="75" src="https://ctfassets.imgix.net/vh7r69kgcki3/1dbIJcmyiy5sLcadW6KtE5/3bae7e4f306beb351a88ac460c110971/GE_Logo.png?auto=format%20compress&fit=crop&q=50&w=200">
+                          <img width="75" height="75" src="{{ url('/images/GreenLogo.png') }}">
                         </div><br>
-                          <h2><b>"เราประสบความสำเร็จในการทำโครงการประหยัดค่าใช้จ่าย ในขณะเดียวกันก็ปรับวัฒนธรรมไปสู่การทำงานร่วมกันให้ดีขึ้นได้สำเร็จด้วย"</b></h2><br>
+                          <h2><b>"บริษัทเราประสบความสำเร็จในการลดค่าใช้จ่ายการจัดเก็บข้อมูลการซ่อมบำรุงรวมไปถึงราคาเบี้ยประกันที่ถูกลงซึ่งเป็นผลดีอย่างมาก"</b></h2><br>
                           <div>
-                            FRANCIS VAN PARYS ประธานและซีอีโอ GE HEALTHCARE KOREA
+                            DR.NATHSETH YURAWAN ประธานและซีอีโอ 2BGREEN CO.,LTD.
                           </div>
                           <div>
                             <a href="">เรียนรู้เพิ่มเติม</a>

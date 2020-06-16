@@ -9,7 +9,10 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="contact-about">
-              <h3>Vesperr</h3>
+              <h3 class="d-none">Vesperr</h3>
+              <img width="120" height="120" src="{{ url('/images/logo-square.jpg') }}">
+              
+              <img width="120" height="120" src="{{ url('/images/GreenLogo.png') }}">
               <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
               <div class="social-links">
                 <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
@@ -24,17 +27,21 @@
             <div class="info">
               <div>
                 <i class="ri-map-pin-line"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p>บริษัท ทูบีกรีน จำกัด<br>
+                  2B-GREEN COMPANY LIMITED.<br>
+                  82/281 Cement-Thai, Ladyao, Chatuchak, <br>
+                  Bangkok, Thailand 10900
+                </p>
               </div>
 
               <div>
                 <i class="ri-mail-send-line"></i>
-                <p>info@example.com</p>
+                <p>2bgreen@hotmail.co.th</p>
               </div>
 
               <div>
                 <i class="ri-phone-line"></i>
-                <p>+1 5589 55488 55s</p>
+                <p> +66(0)86-977-767</p>
               </div>
 
             </div>
