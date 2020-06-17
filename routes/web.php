@@ -10,10 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Dealer;
 
 Route::get('/', function () {
+    $dealers = Dealer::limit(3)->get();
     
-    return view('home');
+    return view('home',compact('dealers'));
 });
 Route::get('/welcome', function () {
     

@@ -82,25 +82,30 @@
 
             <div class="card" style="border: 0px">
 
-              <section style="background: #f7f7f7;">
-
-                <div class="card" style="width: 18rem;position:absolute; margin-left:400px;border: 1px solid #DCDCDC;border-radius: 5px;">
-                    <img src="https://locations-api-production.imgix.net/locations/image/834625e4-1b49-11e9-845b-1202be33576a/0-3.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1000&amp;h=563" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example </p>
-                    </div>
-                  </div> 
-
-                <div class="col-md-4" ><br>
+              <div class="row" style="background: #f7f7f7;">
+                <div class="col-md-3" >
                   <div>อาคารใกล้คุณ </div><br>
                     <h1><b>5 แห่งใน Bangkok</b></h1><br>
                     <div>
-                      <a href="">ดูทั้งหมดใน Bangkok</a>
+                      <a href="{{ url('dealers') }}">ดูทั้งหมดใน Bangkok</a>
                     </div><br><br><br><br>
                 </div>
+
+                @foreach($dealers as $item)
+                <div class="col-md-3">
+                  <div class="card" style=" border: 1px solid #DCDCDC;border-radius: 5px;">
+                      <img src="{{ url('images/isuzu').'/'.$item->latitude.','.$item->longitude.'.jpg' }}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">{{$item->name_dealers}}</h5>
+                        <p class="card-text">{{$item->location}}</p>
+                      </div>
+                  </div> 
+                </div>
+                @endforeach
+
                 
-              </section>
+                
+              </div>
 
             </div><br>
 
