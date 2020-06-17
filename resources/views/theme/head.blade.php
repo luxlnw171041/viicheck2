@@ -32,4 +32,9 @@
         
     }
 
+    #header.header-scrolled {
+        
+        height: 78px;
+    }
+
   </style>

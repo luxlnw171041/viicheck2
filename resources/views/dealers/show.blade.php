@@ -28,6 +28,9 @@
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                               <div class="carousel-inner">
                                 <div class="carousel-item active">
+                                    <img class="d-block w-100" src="{{ url('images/isuzu').'/'.$dealer->latitude.','.$dealer->longitude.'.jpg' }}">
+                                </div>
+                                <div class="carousel-item">
                                   <img class="d-block w-100" src="https://locations-api-production.imgix.net/locations/image/4b90a2cc-2d78-11ea-988f-1214a1ac73cf/Web_150DPI-20190723_WeWork_Seolleung_III_21.jpg?auto=format%20compress&fit=crop&q=50&w=1200&h=675" alt="First slide">
                                 </div>
                                 <div class="carousel-item">

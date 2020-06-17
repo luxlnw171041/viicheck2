@@ -15,37 +15,44 @@
                               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
+                              <!--div class="carousel-item active">
+                                <img src="https://ctfassets.imgix.net/vh7r69kgcki3/eXWPjvkhJLHlYF4UXJUwq/bed3e8b3958db9ecff7aed8736af0573/Web_150DPI-20191213_WeWork_One_Seaport_Square_Boston_004.jpg" width="100%"  alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://ctfassets.imgix.net/vh7r69kgcki3/4Dab4DLfemWorHT001bYeT/51663d4ffca4d876ef69c57011231bd4/3_Web_150DPI-20180808_WeWork_Ponce_De_Leon_-_Art__Murals_and_Details-1.jpg" width="100%"    alt="homepage hero 2">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://ctfassets.imgix.net/vh7r69kgcki3/1PqMvOJcBvq88GvdCoKHFg/49779864d704427e0de36a4544fc9512/2_Web_150DPI-20180607_WeWork_92_Champs-E__lyse__es_-_Common_Areas_-_Couch_Area-2.jpg" width="100%"    alt="homepage hero 3">
+                              </div-->
+
                               <div class="carousel-item active">
-                                <img src="https://ctfassets.imgix.net/vh7r69kgcki3/eXWPjvkhJLHlYF4UXJUwq/bed3e8b3958db9ecff7aed8736af0573/Web_150DPI-20191213_WeWork_One_Seaport_Square_Boston_004.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1096&amp;h=617" alt="" alt="">
+                                <img src="{{ url('images/bicycle-bike-black-and-white-brake-545007.jpg') }}" width="100%"  alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="https://ctfassets.imgix.net/vh7r69kgcki3/4Dab4DLfemWorHT001bYeT/51663d4ffca4d876ef69c57011231bd4/3_Web_150DPI-20180808_WeWork_Ponce_De_Leon_-_Art__Murals_and_Details-1.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1096&amp;h=617" alt="homepage hero 2">
+                                <img src="{{ url('images/road-people-street-smartphone-2224.jpg') }}" width="100%"    alt="homepage hero 2">
                               </div>
                               <div class="carousel-item">
-                                <img src="https://ctfassets.imgix.net/vh7r69kgcki3/1PqMvOJcBvq88GvdCoKHFg/49779864d704427e0de36a4544fc9512/2_Web_150DPI-20180607_WeWork_92_Champs-E__lyse__es_-_Common_Areas_-_Couch_Area-2.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1096&amp;h=617" alt="homepage hero 3">
+                                <img src="{{ url('images/motor-bike-running-close-up-photography-2519374.jpg') }}" width="100%"    alt="homepage hero 3">
                               </div>
                             </div>
                             
                           </div>
 
-                          <div class="col-md-4" style="position:absolute; background: #fff;">
-                            <div>
-                              <h5></h5>
+                          <div class="col-md-4 " style="position:absolute;" >
+                            <div class="px-4" style=" background: #fff;">
+                              <h1 class="mt-5" style="font-size:2em;" data-aos="fade-up"> ปฏิวัติการจัดเก็บข้อมูลของยานพาหนะคุณ </h1>
+                              <h5 class="text-black-50 mt-4" style="font-size:1em;"  data-aos="fade-up" data-aos-delay="400">ไม่ว่าคุณจะเป็นองค์กรบริษัทหรือบุคคลทั่วไปที่อยากมีการจัดเก็บข้อมูลของยานพาหนะที่ได้มาตรฐาน เพื่อทำให้ชีวิตของคุณง่ายสะดวกรวดเร็ว ทั้งหมดอยู่ที่นี่แล้ว</h5>
+                              <div class="py-3">
+                                <label>ค้นหาศูนย์บริการที่ใกล้คุณ</label>
+                                <select class="form-control">
+                                  <option>กรุงเทพ</option>
+                                </select>
+                              </div>
+                              <div class="pb-4" data-aos="fade-up" data-aos-delay="800">
+                                <a href="{{ url('dealers') }}" class="btn btn-outline-primary rounded-pill px-5 py-2 ">เริ่มต้น</a>
+                              </div>
                             </div>
-                            <h1 data-aos="fade-up"><br><b>ปฏิวัติการจัดเก็บข้อมูลของยานพาหนะคุณ</b></h1>
-                            <h5 data-aos="fade-up" data-aos-delay="400">ไม่ว่าคุณจะเป็นองค์กรบริษัทหรือบุคคลทั่วไปพี่อยากมีการจัดเก็บข้อมูลของยานพาหนะที่ได้มาตรฐาน ที่ทำให้ชีวิตของคุณง่ายสะดวกรวดเร็ว ทั้งหมดอยู่ที่นี่แล้ว</h5>
-                            <div class="">
-                              <label>ค้นหาศูนย์บริการที่ใกล้คุณ</label>
-                              <select class="form-control">
-                                <option>กรุงเทพ</option>
-                              </select>
-                            </div>
-                            <div data-aos="fade-up" data-aos-delay="800"><br>
-                              <a href="" class="btn-get-started scrollto">เริ่มต้น</a>
-                            </div>
-                            <div>
-                              <h4><br></h4>
-                            </div>
+                            
                           </div>
                     </section>
             </div>
@@ -102,23 +109,23 @@
               <section >
 
                 <div class="card" style="width: 18rem;position:absolute; margin-left:392px;border: 1px solid #DCDCDC;border-radius: 5px;">
-                    <img src="https://ctfassets.imgix.net/vh7r69kgcki3/2I0PdTXSFMaGjVzDOkwA9p/acfb401bf1b74cfbabed6cf2d222f19b/Web_150DPI-20190723_WeWork_Seolleung_III_12.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1000&amp;h=563" class="card-img-top" alt="...">
+                    <img src="{{ url('images/auto-repair-3691962_1920.jpg') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h4 class="card-title"><a href=""> ห้องชุดสำนักงาน</a></h4>
-                      <p class="card-text">สำนักงานสำหรับทีมขนาดใหญ่ หรือทีมขนาดกลางที่มีความหนาแน่นน้อยลงมา ซึ่งมาพร้อมกับห้องประชุม ห้องทำงานผู้บริหาร และการสนับสนุนการปฏิบัติงาน</p>
+                      <h4 class="card-title"><a href=""> ทีมช่างมืออาชีพ</a></h4>
+                      <p class="card-text">เราดูแลรถของลูกค้าด้วยทีมช่างที่มีความชำนาญและประสบการณ์ เพื่อให้รถของลูกค้าทำงานได้เต็มสมรรถนะ</p>
                     </div>
                   </div>
 
                   <div class="card" style="width: 18rem;position:absolute; margin-left:707px;border: 1px solid #DCDCDC;border-radius: 5px;">
-                    <img src="https://ctfassets.imgix.net/vh7r69kgcki3/2I0PdTXSFMaGjVzDOkwA9p/acfb401bf1b74cfbabed6cf2d222f19b/Web_150DPI-20190723_WeWork_Seolleung_III_12.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1000&amp;h=563" class="card-img-top" alt="...">
+                    <img src="{{ url('images/car-buying-car-dealership-car-mechanic-97075.jpg') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h4 class="card-title"><a href=""> ห้องชุดสำนักงาน</a></h4>
-                      <p class="card-text">สำนักงานสำหรับทีมขนาดใหญ่ หรือทีมขนาดกลางที่มีความหนาแน่นน้อยลงมา ซึ่งมาพร้อมกับห้องประชุม ห้องทำงานผู้บริหาร และการสนับสนุนการปฏิบัติงาน</p>
+                      <h4 class="card-title"><a href=""> ส่งมอบตรงเวลา</a></h4>
+                      <p class="card-text">เพราะรู้ว่าลูกค้าต้องใช้งาน งานซ่อมและงานบริการต่างๆ ต้องตรงต่อเวลา และส่งมอบในสภาพที่สมบูรณ์</p>
                     </div>
                   </div>
 
                   <div class="card d-none" style="width: 18rem;position:absolute; margin-left:1020px;border: 1px solid #DCDCDC;border-radius: 5px;">
-                    <img src="https://ctfassets.imgix.net/vh7r69kgcki3/2I0PdTXSFMaGjVzDOkwA9p/acfb401bf1b74cfbabed6cf2d222f19b/Web_150DPI-20190723_WeWork_Seolleung_III_12.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1000&amp;h=563" class="card-img-top" alt="...">
+                    <img src="{{ url('images/auto-repair-3691962_1920.jpg') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h4 class="card-title"><a href=""> ห้องชุดสำนักงาน</a></h4>
                       <p class="card-text">สำนักงานสำหรับทีมขนาดใหญ่ หรือทีมขนาดกลางที่มีความหนาแน่นน้อยลงมา ซึ่งมาพร้อมกับห้องประชุม ห้องทำงานผู้บริหาร และการสนับสนุนการปฏิบัติงาน</p>
@@ -218,7 +225,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-md-6" style="margin-left:-110px;">
-                        <img width="630" height="400" src="https://ctfassets.imgix.net/vh7r69kgcki3/5QhlwTyEXHyGMuZYVdAaOc/f08b765cd6e645b3b3589774c8c3604d/20190919-IdeasbyWe-ManagedbyQ-CompCulture-01.png?auto=format%20compress&fit=crop&q=50&w=900&h=506">
+                        <img width="630" height="400" src="{{ url('images/forced-perspective-photography-of-cars-running-on-road-below-799443.jpg') }}">
                     </div>
                     
                     <div class="col-md-6" style="margin-left:110px;">
@@ -242,7 +249,7 @@
                   <div class="row">
                     <div class="col-md-4" >
                         <div class="card" style="border: 1px solid #DCDCDC;border-radius: 5px;">
-                          <img src="https://ctfassets.imgix.net/vh7r69kgcki3/2I0PdTXSFMaGjVzDOkwA9p/acfb401bf1b74cfbabed6cf2d222f19b/Web_150DPI-20190723_WeWork_Seolleung_III_12.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1000&amp;h=563" class="card-img-top" alt="...">
+                          <img src="{{ url('images/blur-connection-ecommerce-230544.jpg') }}" height=250  class="card-img-top" alt="...">
                           <div class="card-body">
                             <h4 class="card-title"><a href=""> ห้องชุดสำนักงาน</a></h4>
                             <p class="card-text">สำนักงานสำหรับทีมขนาดใหญ่ หรือทีมขนาดกลางที่มีความหนาแน่นน้อยลงมา ซึ่งมาพร้อมกับห้องประชุม ห้องทำงานผู้บริหาร และการสนับสนุนการปฏิบัติงาน</p>
@@ -252,7 +259,7 @@
 
                     <div class="col-md-4" >
                         <div class="card" style="border: 1px solid #DCDCDC;border-radius: 5px;">
-                          <img src="https://ctfassets.imgix.net/vh7r69kgcki3/2I0PdTXSFMaGjVzDOkwA9p/acfb401bf1b74cfbabed6cf2d222f19b/Web_150DPI-20190723_WeWork_Seolleung_III_12.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1000&amp;h=563" class="card-img-top" alt="...">
+                          <img src="{{ url('images/car-connection-dashboard-1305305.jpg') }}" height=250 class="card-img-top" alt="...">
                           <div class="card-body">
                             <h4 class="card-title"><a href=""> ห้องชุดสำนักงาน</a></h4>
                             <p class="card-text">สำนักงานสำหรับทีมขนาดใหญ่ หรือทีมขนาดกลางที่มีความหนาแน่นน้อยลงมา ซึ่งมาพร้อมกับห้องประชุม ห้องทำงานผู้บริหาร และการสนับสนุนการปฏิบัติงาน</p>
@@ -262,7 +269,7 @@
 
                     <div class="col-md-4" >
                         <div class="card" style="border: 1px solid #DCDCDC;border-radius: 5px;">
-                          <img src="https://ctfassets.imgix.net/vh7r69kgcki3/2I0PdTXSFMaGjVzDOkwA9p/acfb401bf1b74cfbabed6cf2d222f19b/Web_150DPI-20190723_WeWork_Seolleung_III_12.jpg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=1000&amp;h=563" class="card-img-top" alt="...">
+                          <img src="{{ url('images/financing-4521118_1920.jpg') }}" height=250 class="card-img-top" alt="...">
                           <div class="card-body">
                             <h4 class="card-title"><a href=""> ห้องชุดสำนักงาน</a></h4>
                             <p class="card-text">สำนักงานสำหรับทีมขนาดใหญ่ หรือทีมขนาดกลางที่มีความหนาแน่นน้อยลงมา ซึ่งมาพร้อมกับห้องประชุม ห้องทำงานผู้บริหาร และการสนับสนุนการปฏิบัติงาน</p>

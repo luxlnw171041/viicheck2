@@ -30,7 +30,7 @@
                                     <td> <a style="text-decoration: none;" href="{{ url('/dealers/' . $item->id) }}" title="View Dealer">
                                             <h5 class="text-dark">{{ $item->name_dealers }}</h5><br>
                                             <!-- <img width="250" src="{{ asset('/storage/{$item->photo}') }}"> -->
-                                            <img width="250" src="https://cdn.wework.com/locations/image/834625e4-1b49-11e9-845b-1202be33576a/0-3.jpg?q=50&auto=format%20compress&w=300">
+                                            <img width="250" src="{{ url('images/isuzu').'/'.$item->latitude.','.$item->longitude.'.jpg' }}">
                                         </a>
                                     </td>
                                     <td>

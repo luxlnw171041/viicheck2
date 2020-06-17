@@ -1,58 +1,51 @@
 
-<header id="header" class="fixed-top d-flex align-items-center bg-white">
-    <div class="container d-flex align-items-center">
+<header id="header" class="fixed-top  bg-white">
+    <div class="container ">
+       
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <a class="navbar-brand" href="{{ url('/') }}">
+          <img src="{{ url('images/logo.jpg') }}" alt="" height="50">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item"><a class="nav-link" href="{{ url('dealers') }}">ตำแหน่งศูนย์บริการ</a></li>
+            <li class="nav-item d-none"><a class="nav-link" href="">พื้นที่ทำงาน</a></li>
+            <li class="nav-item d-none"><a class="nav-link" href="">องค์กร</a></li>
+            <li class="nav-item d-none"><a class="nav-link" href="">แนวคิด</a></li>
+            
+            <li class="nav-item" ><a class="nav-link" href="#contact">ติดต่อเรา</a></li>
+            <!-- <li class="get-started"><a href="{{ url('/welcome') }}">ลงชื่อเข้าใช้ &nbsp; <i class="icofont-ui-user"></i></a></li> -->
 
-      <div class="logo mr-auto">
-        <!--h1 class="d-none text-light"><a href="{{ url('/home') }}"><span>Viicheck 2</span></a></h1-->
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="{{ url('/') }}"><img src="{{ url('images/logo.jpg') }}" alt="" class="img-fluid"></a>
-      </div>
+            
+            @auth
+              <li class="nav-item dropdown">
+                  <a id="navbarDropdown" class="nav-link dropdown-toggle text-primary" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                      {{ Auth::user()->name }} <span class="caret"></span>
+                  </a>
 
-        @if (Route::has('login'))
-      <nav class="nav-menu nav-a d-none d-lg-block">
-          @auth
-              <ul>
-                <li><a href="{{ url('dealers') }}">ตำแหน่งที่ตั้ง</a></li>
-                <li><a href="">พื้นที่ทำงาน</a></li>
-                <li><a href="">องค์กร</a></li>
-                <li><a href="">แนวคิด</a></li>
-                
-                <li><a href="">ติดต่อเรา</a></li>
-                <!-- <li class="get-started"><a href="{{ url('/welcome') }}">ลงชื่อเข้าใช้ &nbsp; <i class="icofont-ui-user"></i></a></li> -->
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                          {{ __('Logout') }}
+                      </a>
 
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle text-primary" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
+                  </div>
+              </li>
+            @else
+              <li class="nav-item"><a  class="nav-link  get-started btn btn-primary rounded-pill text-white px-3 ml-2" href="{{ url('/login') }}">ลงชื่อเข้าใช้ &nbsp; <i class="icofont-ui-user"></i></a></li>
+            @endauth          
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                </li>
-
-              </ul>
-          @else
-              <ul>
-                <li><a href="">ตำแหน่งที่ตั้ง</a></li>
-                <li><a href="">พื้นที่ทำงาน</a></li>
-                <li><a href="">องค์กร</a></li>
-                <li><a href="">แนวคิด</a></li>
-                
-                <li><a href="">ติดต่อเรา</a></li>
-                <li class="get-started"><a href="{{ url('/login') }}">ลงชื่อเข้าใช้ &nbsp; <i class="icofont-ui-user"></i></a></li>
-              </ul>
-          @endauth
-
+          </ul>
+        </div>
       </nav><!-- .nav-menu -->
-        @endif
 
     </div>
   </header><!-- End Header -->
