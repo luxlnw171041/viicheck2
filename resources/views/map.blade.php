@@ -19,10 +19,29 @@
     <script>
 
         function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 13.9896219 , lng: 100.5778827}, 
+          
+          var position = {lat: 13.9896219 , lng: 100.5778827};
+
+          // var locations = ;
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: position, 
             zoom: 15
             });
+
+          var marker = new google.maps.Marker({
+            position: position, 
+            map: map,
+          });
+
+          var info = new google.maps.InfoWindow({
+            content : '<div style = "font-size:15px;"> marker </div>'
+          });
+
+          google.maps.event.addListener(marker,'click',function(){
+            info.open(map , marker);
+          });
+
         }
 
         google.maps.event.addDomListener(window, 'load', initMap);
