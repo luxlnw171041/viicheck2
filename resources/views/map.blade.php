@@ -1,54 +1,43 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Map</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-NoP20OejFNd_gxMizvmRCDHwRPg0gJI" ></script>
-    <style type="text/css">
-      #map {
-        height: 100%;
-      }
 
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-    <script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-NoP20OejFNd_gxMizvmRCDHwRPg0gJI" ></script>
+<style type="text/css">
+    #map {
+      height: calc(70vh);
+    }
 
-        function initMap() {
-          
-          var position = {lat: 13.9896219 , lng: 100.5778827};
+    
+</style>
+<script>
 
-          // var locations = ;
+    function initMap() {
+      
+      //var position = ;
 
-          var map = new google.maps.Map(document.getElementById('map'), {
-            center: position, 
-            zoom: 15
-            });
+      // var locations = ;
 
-          var marker = new google.maps.Marker({
-            position: position, 
-            map: map,
-          });
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 13.9896219 , lng: 100.5778827}, 
+        zoom: 15
+        });
 
-          var info = new google.maps.InfoWindow({
-            content : '<div style = "font-size:15px;"> marker </div>'
-          });
+      @foreach($dealers as $item)
+      var marker = new google.maps.Marker({
+        position: {lat: {{ $item->latitude }} , lng: {{ $item->longitude }} }, 
+        map: map,
+      });     
 
-          google.maps.event.addListener(marker,'click',function(){
-            info.open(map , marker);
-          });
+      /*google.maps.event.addListener(marker,'click',function(){
+        var info = new google.maps.InfoWindow({
+          content : '<div style = "font-size:15px;"> marker </div>'
+        });
+        info.open(map , marker);
+      });*/
+      @endforeach
 
-        }
+    }
 
-        google.maps.event.addDomListener(window, 'load', initMap);
+    google.maps.event.addDomListener(window, 'load', initMap);
 
-    </script>
-  </head>
-  <body>
-    <div id="map"></div>
-  </body>
-</html>
+</script>
+<div id="map"></div>
