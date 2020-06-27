@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('theme.main')
 
 @section('content')
     <div class="container">
@@ -28,14 +28,26 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Name</th><th>Lastname</th><th>Card Number</th><th>Address</th><th>Contact</th><th>User Id</th><th>Actions</th>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Lastname</th>
+                                        <th>Card Number</th>
+                                        <th>Address</th>
+                                        <th>Contact</th>
+                                        <th>User Id</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($profiles as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->name }}</td><td>{{ $item->lastname }}</td><td>{{ $item->card_number }}</td><td>{{ $item->address }}</td><td>{{ $item->contact }}</td><td>{{ $item->user_id }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->lastname }}</td>
+                                        <td>{{ $item->card_number }}</td>
+                                        <td>{{ $item->address }}</td>
+                                        <td>{{ $item->contact }}</td>
+                                        <td>{{ $item->user_id }}</td>
                                         <td>
                                             <a href="{{ url('/profiles/' . $item->id) }}" title="View Profile"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/profiles/' . $item->id . '/edit') }}" title="Edit Profile"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

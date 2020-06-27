@@ -8,21 +8,7 @@
   @include('theme.js')
   <div id="content-wrapper" class="d-flex flex-column">
     <div id="content">  
-    	<div class="container d-flex align-items-center">
-    		<br><br><br>
-	      <div class="logo mr-auto">
-	        <!--h1 class="d-none text-light"><a href="{{ url('/home') }}"><span>Viicheck 2</span></a></h1-->
-	        <!-- Uncomment below if you prefer to use an image logo -->
-	        <a href="{{ url('/') }}"><img width="75" height="75"  src="{{ url('images/logo.jpg') }}" alt="" class="img-fluid"></a>
-	      </div>
-	      <nav class="nav-menu nav-a d-none d-lg-block">
-	              <ul>
-	                <li><a href="">ติดต่อเรา</a></li>
-	                <li class="get-started"><a href="{{ url('/login') }}">ลงชื่อเข้าใช้ &nbsp; <i class="icofont-ui-user"></i></a></li>
-	              </ul>
-	      </nav><!-- .nav-menu -->
-	        
-	    </div>
+    	 @include('theme.navbar')
 	    <div id="wrapper"> 
 	        @include('theme.sidebar')
 	        <div class="container-fluid pt-5 pb-5 mb-5">
@@ -32,7 +18,7 @@
 
 				    	<div class="container">
 					        <div class="col-md-12">
-					        	<div class="row">
+					        	<div class="row"><br><br>
 
 					        		<p>This User Agreement (this “Agreement”) describes the terms and conditions applicable to Your access to, and use of, the Viicheck (“ViiCheck”) web site located at http://viicheck.com. We may amend this Agreement at any time by posting the amended terms on our site.  Except as stated below, all amended terms shall automatically become effective 7 days after they are initially posted on our site.  This Agreement may not be otherwise amended except in a writing signed by You and ViiCheck.  This Agreement is effective as of February 29, 2020 for new registering users and is otherwise effective on March 7, 2020 for all users registered prior to February 28, 2020.</p>
 

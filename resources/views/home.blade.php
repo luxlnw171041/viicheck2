@@ -169,7 +169,6 @@
 
                                 </script>
 
-                              <br>
                               <div class="pb-4" data-aos="fade-up" data-aos-delay="800">
                                 <a href="{{ url('dealers') }}" class="btn btn-outline-primary rounded-pill px-5 py-2 ">เริ่มต้น</a>
                               </div>
