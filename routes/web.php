@@ -52,3 +52,8 @@ Route::get('/map', function () {
 });
 
 Route::resource('dealers', 'DealersController');
+Route::resource('districts', 'DistrictsController');
+
+Route::get('/district', function () {
+    return view("district/index");
+});

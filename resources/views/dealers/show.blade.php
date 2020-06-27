@@ -70,9 +70,9 @@
                             <div><p></p></div>
                             <div style="height: 400px;">
                                 <br>
-                                @include('map')
+                                @include('mapshow')
                             </div>
-                            <div><p></p></div>
+                            <br><br>
                             <div>
                                 <p> การขนส่งใกล้เคียง<br>
                                     <i class="icofont-bus"></i> &nbsp; BTS Line at Ratchathewi Station (2 minute walk)

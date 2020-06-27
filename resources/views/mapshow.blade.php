@@ -3,7 +3,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-NoP20OejFNd_gxMizvmRCDHwRPg0gJI" ></script>
 <style type="text/css">
     #map {
-      height: calc(70vh);
+      height: 100%;
     }
 
     
@@ -17,23 +17,21 @@
       // var locations = ;
 
       var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 13.3 , lng: 100.5778827}, 
-        zoom: 5.8
+        center: {lat: {{ $dealer->latitude }} , lng: {{ $dealer->longitude }}}, 
+        zoom: 15
         });
 
-      @foreach($dealers as $item)
       var marker = new google.maps.Marker({
-        position: {lat: {{ $item->latitude }} , lng: {{ $item->longitude }} }, 
+        position: {lat: {{ $dealer->latitude }} , lng: {{ $dealer->longitude }} }, 
         map: map,
       });     
 
-      /*google.maps.event.addListener(marker,'click',function(){
+      google.maps.event.addListener(marker,'click',function(){
         var info = new google.maps.InfoWindow({
-          content : '<div style = "font-size:15px;"> marker </div>'
+          content : '<div style = "font-size:15px;"> {{ $dealer->name_dealers }}<br>{{ $dealer->location }} </div>'
         });
         info.open(map , marker);
-      });*/
-      @endforeach
+      });
 
     }
 

@@ -1,0 +1,33 @@
+{
+    "fields": [
+        {
+            "name": "district",
+            "type": "string"
+        },
+        {
+            "name": "amphoe",
+            "type": "string"
+        },
+        {
+            "name": "province",
+            "type": "string"
+        },
+        {
+            "name": "zipcode",
+            "type": "string"
+        },
+        {
+            "name": "district_code",
+            "type": "string"
+        },
+        {
+            "name": "amphoe_code",
+            "type": "string"
+        },
+        {
+            "name": "province_code",
+            "type": "string"
+        }
+    ]
+}
+

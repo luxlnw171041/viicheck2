@@ -44,10 +44,132 @@
                               <h5 class="text-black-50 mt-4" style="font-size:1em;"  data-aos="fade-up" data-aos-delay="400">ไม่ว่าคุณจะเป็นองค์กรบริษัทหรือบุคคลทั่วไปที่อยากมีการจัดเก็บข้อมูลของยานพาหนะที่ได้มาตรฐาน เพื่อทำให้ชีวิตของคุณง่ายสะดวกรวดเร็ว ทั้งหมดอยู่ที่นี่แล้ว</h5>
                               <div class="py-3">
                                 <label>ค้นหาศูนย์บริการที่ใกล้คุณ</label>
-                                <select class="form-control">
-                                  <option>กรุงเทพ</option>
-                                </select>
+                                  <div>
+                                    <select class="form-control" id="input_province" onchange="showAmphoes()">
+                                      <option value="">กรุณาเลือกจังหวัด</option>
+                                    </select>
+                                  </div>
+                                  <!-- <div>
+                                    <select class="form-control" id="input_amphoe" onchange="showDistricts()">
+                                      <option value="">กรุณาเลือกอำเภอ</option>
+                                    </select>
+                                  </div>
+                                  <div>
+                                    <select class="form-control" id="input_district" onchange="showZipcode()">
+                                      <option value="">กรุณาเลือกตำบล</option>
+                                    </select>
+                                  </div>
+                                  <div>
+                                    <input class="form-control" id="input_zipcode" placeholder="รหัสไปรษณีย์" />
+                                  </div> -->
                               </div>
+
+                                <script>
+                                  $(document).ready(function(){
+                                    console.log("HELLO");
+                                    showProvinces();
+                                  });
+                                </script>
+                                
+                                <script>
+                                    function ajax(url, callback){
+                                      $.ajax({
+                                        "url" : url,
+                                        "type" : "GET",
+                                        "dataType" : "json",
+                                      })
+                                      .done(callback); //END AJAX
+                                    }
+                                </script>
+
+                                <script>
+                                    function showProvinces(){
+                                      //PARAMETERS
+                                      var url = "{{ url('/') }}/api/province";
+                                      var callback = function(result){
+                                        $("#input_province").empty();
+                                        for(var i=0; i<result.length; i++){
+                                          $("#input_province").append(
+                                            $('<option></option>')
+                                              .attr("value", "1"+result[i].province_code)
+                                              .html(""+result[i].province)
+                                          );
+                                        }
+                                        showAmphoes();
+                                      };
+                                      //CALL AJAX
+                                      ajax(url,callback);
+                                    }
+                                </script>
+
+                                <script>
+                                  function showAmphoes(){
+                                      //INPUT
+                                      var province_code = $("#input_province").val();
+                                      //PARAMETERS
+                                      var url = "{{ url('/') }}/api/province/"+province_code+"/amphoe";
+                                      var callback = function(result){
+                                        //console.log(result);
+                                        $("#input_amphoe").empty();
+                                        for(var i=0; i<result.length; i++){
+                                          $("#input_amphoe").append(
+                                            $('<option></option>')
+                                              .attr("value", ""+result[i].amphoe_code)
+                                              .html(""+result[i].amphoe)
+                                          );
+                                        }
+                                        showDistricts();
+                                      };
+                                      //CALL AJAX
+                                      ajax(url,callback);
+                                    }
+                                </script>
+                                    
+                                <script>
+                                  function showDistricts(){
+                                      //INPUT
+                                      var province_code = $("#input_province").val();
+                                      var amphoe_code = $("#input_amphoe").val();
+                                      //PARAMETERS
+                                      var url = "{{ url('/') }}/api/province/"+province_code+"/amphoe/"+amphoe_code+"/district";
+                                      var callback = function(result){
+                                        //console.log(result);
+                                        $("#input_district").empty();
+                                        for(var i=0; i<result.length; i++){
+                                          $("#input_district").append(
+                                            $('<option></option>')
+                                              .attr("value", ""+result[i].district_code)
+                                              .html(""+result[i].district)
+                                          );
+                                        }
+                                        showZipcode();
+                                      };
+                                      //CALL AJAX
+                                      ajax(url,callback);
+                                    }
+                                </script>
+                                    
+                                <script>
+                                  function showZipcode(){
+                                      //INPUT
+                                      var province_code = $("#input_province").val();
+                                      var amphoe_code = $("#input_amphoe").val();
+                                      var district_code = $("#input_district").val();
+                                      //PARAMETERS
+                                      var url = "{{ url('/') }}/api/province/"+province_code+"/amphoe/"+amphoe_code+"/district/"+district_code;
+                                      var callback = function(result){
+                                        //console.log(result);
+                                        for(var i=0; i<result.length; i++){
+                                          $("#input_zipcode").val(result[i].zipcode);
+                                        }
+                                      };
+                                      //CALL AJAX
+                                      ajax(url,callback);
+                                    }
+
+                                </script>
+
+                              <br>
                               <div class="pb-4" data-aos="fade-up" data-aos-delay="800">
                                 <a href="{{ url('dealers') }}" class="btn btn-outline-primary rounded-pill px-5 py-2 ">เริ่มต้น</a>
                               </div>
@@ -293,3 +415,5 @@
 
     </div>
 @endsection
+
+        

@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Dealer;
+use App\District;
 use Illuminate\Http\Request;
 
-class DealersController extends Controller
+class DistrictsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,25 +18,22 @@ class DealersController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->get('search');
-        $perPage = 5;
+        $perPage = 25;
 
         if (!empty($keyword)) {
-            $dealers = Dealer::where('name_dealers', 'LIKE', "%$keyword%")
+            $districts = District::where('district', 'LIKE', "%$keyword%")
+                ->orWhere('amphoe', 'LIKE', "%$keyword%")
                 ->orWhere('province', 'LIKE', "%$keyword%")
-                ->orWhere('dealer', 'LIKE', "%$keyword%")
-                ->orWhere('isuzu_all', 'LIKE', "%$keyword%")
-                ->orWhere('pickup_and_multipurpose', 'LIKE', "%$keyword%")
-                ->orWhere('paint_and_body', 'LIKE', "%$keyword%")
-                ->orWhere('location', 'LIKE', "%$keyword%")
-                ->orWhere('latitude', 'LIKE', "%$keyword%")
-                ->orWhere('longitude', 'LIKE', "%$keyword%")
-                ->orWhere('image', 'LIKE', "%$keyword%")
+                ->orWhere('zipcode', 'LIKE', "%$keyword%")
+                ->orWhere('district_code', 'LIKE', "%$keyword%")
+                ->orWhere('amphoe_code', 'LIKE', "%$keyword%")
+                ->orWhere('province_code', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
-            $dealers = Dealer::latest()->paginate($perPage);
+            $districts = District::latest()->paginate($perPage);
         }
 
-        return view('dealers.index', compact('dealers'));
+        return view('districts.index', compact('districts'));
     }
 
     /**
@@ -46,7 +43,7 @@ class DealersController extends Controller
      */
     public function create()
     {
-        return view('dealers.create');
+        return view('districts.create');
     }
 
     /**
@@ -60,14 +57,10 @@ class DealersController extends Controller
     {
         
         $requestData = $request->all();
-                if ($request->hasFile('image')) {
-            $requestData['image'] = $request->file('image')
-                ->store('uploads', 'public');
-        }
+        
+        District::create($requestData);
 
-        Dealer::create($requestData);
-
-        return redirect('dealers')->with('flash_message', 'Dealer added!');
+        return redirect('districts')->with('flash_message', 'District added!');
     }
 
     /**
@@ -79,9 +72,9 @@ class DealersController extends Controller
      */
     public function show($id)
     {
-        $dealer = Dealer::findOrFail($id);
+        $district = District::findOrFail($id);
 
-        return view('dealers.show', compact('dealer'));
+        return view('districts.show', compact('district'));
     }
 
     /**
@@ -93,9 +86,9 @@ class DealersController extends Controller
      */
     public function edit($id)
     {
-        $dealer = Dealer::findOrFail($id);
+        $district = District::findOrFail($id);
 
-        return view('dealers.edit', compact('dealer'));
+        return view('districts.edit', compact('district'));
     }
 
     /**
@@ -110,15 +103,11 @@ class DealersController extends Controller
     {
         
         $requestData = $request->all();
-                if ($request->hasFile('image')) {
-            $requestData['image'] = $request->file('image')
-                ->store('uploads', 'public');
-        }
+        
+        $district = District::findOrFail($id);
+        $district->update($requestData);
 
-        $dealer = Dealer::findOrFail($id);
-        $dealer->update($requestData);
-
-        return redirect('dealers')->with('flash_message', 'Dealer updated!');
+        return redirect('districts')->with('flash_message', 'District updated!');
     }
 
     /**
@@ -130,8 +119,8 @@ class DealersController extends Controller
      */
     public function destroy($id)
     {
-        Dealer::destroy($id);
+        District::destroy($id);
 
-        return redirect('dealers')->with('flash_message', 'Dealer deleted!');
+        return redirect('districts')->with('flash_message', 'District deleted!');
     }
 }

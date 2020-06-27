@@ -9,7 +9,16 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                            <form method="GET" action="{{ url('/dealers') }}" accept-charset="UTF-8"  role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="search" placeholder="Search..." value="{{ request('search') }}">
+                                    <span class="input-group-append">
+                                        <button class="btn btn-secondary" type="submit">
+                                            <i class="icofont-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
                         </div>
 
                         <div class="col-md-8">
@@ -26,6 +35,9 @@
                           <div class="card-body">
                             <table class="table">
                                 @foreach($dealers as $item)
+                                <tr>
+                                    
+                                </tr>
                                 <tr>
                                     <td> <a style="text-decoration: none;" href="{{ url('/dealers/' . $item->id) }}" title="View Dealer">
                                             <h5 class="text-dark">{{ $item->name_dealers }}</h5><br>
