@@ -27,5 +27,11 @@ class Profile extends Model
      */
     protected $fillable = ['name', 'lastname', 'card_number', 'address', 'contact', 'user_id','role'];
 
-    
+    public function user(){
+        return $this->belongsTo('App\User', 'user_id'); 
+    }
+
+    public function cars(){
+        return $this->hasMany('App\Car','user_id');
+    }
 }
