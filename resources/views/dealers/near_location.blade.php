@@ -25,10 +25,7 @@
               </div>
             </form>
         </div>
-
-        <div id="near_location" class="col-md-12"> 
-
-        </div> 
+        
 
         <script>
            $('form#search_location').submit(function(event) {
