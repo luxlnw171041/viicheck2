@@ -46,6 +46,10 @@ Route::get('/d', function () {
     return view('d');
 });
 
+Route::get('near_location', function () {
+    return view('dealers/near_location');
+});
+
 
 Route::get('/map', function () {
     return view('map');
