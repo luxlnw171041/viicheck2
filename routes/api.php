@@ -23,3 +23,5 @@ Route::get('/province/{province_code}/amphoe/{amphoe_code}/district','API\Distri
 Route::get('/province/{province_code}/amphoe/{amphoe_code}/district/{district_code}','API\DistrictController@detail');
 
 Route::get('/dealer','API\DealersController@index');
+
+Route::post('/Mylog','API\DealersController@store');

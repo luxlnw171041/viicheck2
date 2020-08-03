@@ -61,3 +61,4 @@ Route::resource('districts', 'DistrictsController');
 Route::get('/district', function () {
     return view("district/index");
 });
+Route::resource('mylog', 'MylogController');
