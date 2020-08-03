@@ -43,7 +43,7 @@ class DealersController extends Controller
         Mylog::create($data);
 
 		// Parse JSON
-		$events = json_decode($content, true);
+		$events = $content;
 		// Validate parsed JSON data
 		if (!is_null($events['events'])) {
 		    // Loop through each event
