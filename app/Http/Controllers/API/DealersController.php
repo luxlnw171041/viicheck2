@@ -49,9 +49,11 @@ class DealersController extends Controller
 		    // Loop through each event
 		    foreach ($events['events'] as $event) {
 		        // Reply only when message sent is in 'text' format
-		        if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		        if ($event['type'] == 'message' && $event['message']['type'] == 'location') {
 		            // Get text sent
-		            $text = $event['message']['text'];
+		            $lat = $event['message']['latitude'];
+		            $lng = $event['message']['longitude'];
+		            $text = $lat . " / " . $lng ;
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
 		            // Build message to reply back
