@@ -64,7 +64,7 @@ class DealersController extends Controller
 		            // Build message to reply back
 		            $messages = [
 		                'type' => 'text',
-		                'text' => $dealer,
+		                'text' => $Your_location,
 		            ];
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
