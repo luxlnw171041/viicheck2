@@ -58,7 +58,7 @@ class DealersController extends Controller
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
 		            // Build message to reply back
-		            messages: [{
+		            $messages: [{
 						        'type': "location",
 						        'title': "LINE Company (Thailand) Limited",
 						        'address': "127 อาคารเกษรทาวเวอร์ ชั้น17 ถ.ราชดำริ แขวงลุมพินี เขตปทุมวัน กรุงเทพฯ 10330",
