@@ -19,7 +19,7 @@ class DealersController extends Controller
 
 			$dealer = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lats) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lngs) ) + sin( radians($lats) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
-        	return response()->json_encode($dealer);
+        	return response()->json($dealer);
 
 		    echo "<pre>";
 		    print_r($dealer);
@@ -53,17 +53,20 @@ class DealersController extends Controller
 		            // Get text sent
 		            $lat = $event['message']['latitude'];
 		            $lng = $event['message']['longitude'];
-		            $near_location = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
+		            $address = $event['message']['address'];
+		            $id = $event['message']['id'];
 
-		            // $lats = $event['near_location']['latitude'];
-		            // $lngs = $event['near_location']['longitude'];
+		            // $near_location = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
 		            // Build message to reply back
 		            messages: [{
-						        'type': "location",
-						        'title': $near_location,
+						        'type': 'location',
+						        'title': $id,
+						        'address': $address,
+						        'latitude': $lat,
+						        'longitude': $lng
 						      }];
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
