@@ -53,7 +53,7 @@ class DealersController extends Controller
 		            // Get text sent
 		            $lat = $event['message']['latitude'];
 		            $lng = $event['message']['longitude'];
-		            $Your_location = $lat . " / " . $lng ;
+		            $text = $lat . " / " . $lng ;
 
 		            $dealer = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lats) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lngs) ) + sin( radians($lats) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
@@ -64,7 +64,7 @@ class DealersController extends Controller
 		            // Build message to reply back
 		            $messages = [
 		                'type' => 'text',
-		                'text' => $Your_location,
+		                'text' => $text,
 		            ];
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
