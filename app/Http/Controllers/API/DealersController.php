@@ -17,9 +17,9 @@ class DealersController extends Controller
 
 		if(!empty($lats) or !empty($lngs)){
 
-			$dealer = DB::select("SELECT name_dealers,location,province,latitude,longitude,( 3959 * acos( cos( radians($lats) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lngs) ) + sin( radians($lats) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
+			$dealer = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lats) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lngs) ) + sin( radians($lats) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
-        	return response()->json($dealer);
+        	// return response()->json($dealer);
 
 		    echo "<pre>";
 		    print_r($dealer);
@@ -53,23 +53,22 @@ class DealersController extends Controller
 		            // Get text sent
 		            $lat = $event['message']['latitude'];
 		            $lng = $event['message']['longitude'];
-
-		            $near_location = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
-
+		            $text = $lat . " / " . $lng ;
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
 		            // Build message to reply back
 		            $messages = [
-		                'type' => 'text',
-		                'text' =>   echo "<pre>";
-								    print_r($near_location);
-								    echo "</pre>";,
+		                'type' => 'location',
+		                'title' => $name_dealers,
+		                'address' => $location,
+		                'latitude' => $latitude,
+		                'longitude' => $longitude,
 		            ];
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
 		            $data = [
 		                'replyToken' => $replyToken,
-		                'messages' => [$messages]
+		                'messages' => [$messages , $messages , $messages , $messages , $messages]
 		            ];
 		            $post = json_encode($data);
 		            $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
