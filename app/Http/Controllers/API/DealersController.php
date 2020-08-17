@@ -53,14 +53,7 @@ class DealersController extends Controller
 		            // Get text sent
 		            $lat = $event['message']['latitude'];
 		            $lng = $event['message']['longitude'];
-		            $your_location = $lat . " / " . $lng ;
-
-		   //          if(!empty($lat) or !empty($lng)){
-
-					// 	$dealer = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
-
-			  //       	return response()->json($dealer);
-					// }
+		            $your_location = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
