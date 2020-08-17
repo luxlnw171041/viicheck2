@@ -54,14 +54,14 @@ class DealersController extends Controller
 		            $lat = $event['message']['latitude'];
 		            $lng = $event['message']['longitude'];
 		            $near_location = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
-		            return response()->json($dealer);
+		            return response()->json($near_location);
 
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
 		            // Build message to reply back
 		            $messages = [
 		                'type' => 'text',
-		                'text' => print_r($near_location),
+		                'text' => "test",
 		            ];
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
