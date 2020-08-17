@@ -51,10 +51,11 @@ class DealersController extends Controller
 		        // Reply only when message sent is in 'text' format
 		        if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 		            // Get text sent
-		            $lat = $event['message']['latitude'];
-		            $lng = $event['message']['longitude'];
-		            $address = $event['message']['address'];
-		            $id = $event['message']['id'];
+		            
+		            // $lat = $event['message']['latitude'];
+		            // $lng = $event['message']['longitude'];
+		            // $address = $event['message']['address'];
+		            // $id = $event['message']['id'];
 
 		            // $near_location = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
@@ -62,11 +63,11 @@ class DealersController extends Controller
 		            $replyToken = $event['replyToken'];
 		            // Build message to reply back
 		           "message": {
-								"type": "location",
-								"id": "12513493863586",
-								"address": "ซอยเทพกุญชร35 ตำบล คลองหนึ่ง อำเภอคลองหลวง ปทุมธานี 12120 ประเทศไทย",
-								"latitude": 14.112036,
-								"longitude": 100.622596
+								'type': 'location',
+								'id': '12513493863586',
+								'address': "ซอยเทพกุญชร35 ตำบล คลองหนึ่ง อำเภอคลองหลวง ปทุมธานี 12120 ประเทศไทย",
+								'latitude': 14.112036,
+								'longitude': 100.622596
 							}
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
