@@ -54,6 +54,7 @@ class DealersController extends Controller
 		            $lat = $event['message']['latitude'];
 		            $lng = $event['message']['longitude'];
 		            $near_location = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
+		            return response()->json($dealer);
 
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
@@ -72,7 +73,7 @@ class DealersController extends Controller
 		            $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		            $ch = curl_init($url);
 		            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-		            curl_setopt($ch, CURLOPT_RETURNTRANSFER, $near_location);
+		            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		            curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 		            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 		            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
