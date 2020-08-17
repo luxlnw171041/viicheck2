@@ -49,7 +49,7 @@ class DealersController extends Controller
 		    // Loop through each event
 		    foreach ($events['events'] as $event) {
 		        // Reply only when message sent is in 'text' format
-		        if ($event['type'] == 'message' && $event['message']['type'] == 'location') {
+		        if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 		            // Get text sent
 		            $lat = $event['message']['latitude'];
 		            $lng = $event['message']['longitude'];
@@ -61,13 +61,13 @@ class DealersController extends Controller
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
 		            // Build message to reply back
-		            messages: [{
-						        'type': 'location',
-						        'title': $id,
-						        'address': $address,
-						        'latitude': $lat,
-						        'longitude': $lng
-						      }];
+		           "message": {
+								"type": "location",
+								"id": "12513493863586",
+								"address": "ซอยเทพกุญชร35 ตำบล คลองหนึ่ง อำเภอคลองหลวง ปทุมธานี 12120 ประเทศไทย",
+								"latitude": 14.112036,
+								"longitude": 100.622596
+							}
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
 		            $data = [
