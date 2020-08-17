@@ -57,14 +57,21 @@ class DealersController extends Controller
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
 		            // Build message to reply back
-		            $messages = [
-		                'type' => 'location',
-		                'title' => "TEST",
-		                'name' => "NAME",
-		                'address' => $text,
-		                'latitude' => $lat,
-		                'longitude' => $lng,
-		            ];
+
+		            if(!empty($lat) or !empty($lng)){
+
+						$dealer = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
+
+						$messages = [
+				                'type' => 'location',
+				                'title' => name_dealers,
+				                'address' => location,
+				                'latitude' => latitude,
+				                'longitude' => longitude,
+				            ];
+
+					}
+		            
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
 		            $data = [
