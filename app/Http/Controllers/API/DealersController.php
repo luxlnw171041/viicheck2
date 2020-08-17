@@ -60,6 +60,7 @@ class DealersController extends Controller
 		            $messages = [
 		                'type' => 'location',
 		                'title' => "TEST",
+		                'name' => "NAME",
 		                'address' => $text,
 		                'latitude' => $lat,
 		                'longitude' => $lng,
