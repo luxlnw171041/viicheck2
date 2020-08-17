@@ -58,13 +58,13 @@ class DealersController extends Controller
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
 		            // Build message to reply back
-		            $messages = [
-		                "type": "location",
-					    "title": "my location",
-					    "address": "Bangkok, Thailand",
-					    "latitude": 35.65910807942215,
-					    "longitude": 139.70372892916203
-		            ];
+		            messages: [{
+						        'type': "location",
+						        'title': "LINE Company (Thailand) Limited",
+						        'address': "127 อาคารเกษรทาวเวอร์ ชั้น17 ถ.ราชดำริ แขวงลุมพินี เขตปทุมวัน กรุงเทพฯ 10330",
+						        'latitude': 13.7460089,
+						        'longitude': 100.5386192
+						      }];
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
 		            $data = [
