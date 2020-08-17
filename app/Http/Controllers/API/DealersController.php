@@ -57,7 +57,7 @@ class DealersController extends Controller
 
 		            $dealer = DB::select("SELECT name_dealers,location,province,( 3959 * acos( cos( radians($lats) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lngs) ) + sin( radians($lats) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
-        				return response()->json($dealer);
+        				// return response()->json($dealer);
 
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
