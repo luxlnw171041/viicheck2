@@ -53,7 +53,7 @@ class DealersController extends Controller
 		            // Get text sent
 		            $lat = $event['message']['latitude'];
 		            $lng = $event['message']['longitude'];
-		            $text = $lat . " / " . $lng ;
+		            $your_location = $lat . " / " . $lng ;
 
 		            if(!empty($lat) or !empty($lng)){
 
@@ -67,7 +67,7 @@ class DealersController extends Controller
 		            // Build message to reply back
 		            $messages = [
 		                'type' => 'text',
-		                'text' => $dealer,
+		                'text' => $your_location,
 		            ];
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
