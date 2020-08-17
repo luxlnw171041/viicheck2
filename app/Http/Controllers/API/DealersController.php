@@ -31,7 +31,7 @@ class DealersController extends Controller
 
 	public function store(Request $request)
 	{
-		$access_token = 'zdNI46IvAlLQF7ekb658ryh8u7AGNTOOV59XXcG1ValPZ14iutLa6f+lezyaNXGUNA9SPWTBr4ooOYPusYcwuZjsy6khvF717wmNnAEBu4oEr79QZthPiU4GYS1rsAoMUI6+qtFljOlxGgM4qdezaQdB04t89/1O/w1cDnyilFU=';
+		$access_token = 'es9wh5s70CThUrRxbF62bIYGxPCeAbRlQbC2jktBUuMWyQISqyBrtkLiyHh9Wfx8NA9SPWTBr4ooOYPusYcwuZjsy6khvF717wmNnAEBu4peodF+Z4AZ3s6KOexDq3+Fa9oNWiyCLNuf1sHKz4Hc9AdB04t89/1O/w1cDnyilFU=';
 		// Get POST body content
 		// $content = file_get_contents('php://input');
 
