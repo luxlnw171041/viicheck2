@@ -66,7 +66,7 @@ class DealersController extends Controller
 		            $replyToken = $event['replyToken'];
 		            // Build message to reply back
 		            $messages = [
-		                'type' => 'json',
+		                'type' => 'text',
 		                'text' => $dealer,
 		            ];
 		            // Make a POST Request to Messaging API to reply to sender
