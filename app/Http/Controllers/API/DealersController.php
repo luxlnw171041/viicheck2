@@ -62,8 +62,9 @@ class DealersController extends Controller
 		            		$sql = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
 		            		$Query = request()->all();
+		            		return response()->json($Query);
 		            		
-		            	}
+		            	
 
 		            // Build message to reply back
 		            $messages = [
@@ -87,6 +88,9 @@ class DealersController extends Controller
 		            $result = curl_exec($ch);
 		            curl_close($ch);
 		            echo $result . "";
+
+		        		}
+		        		
 		        }
 		    }
 		}
