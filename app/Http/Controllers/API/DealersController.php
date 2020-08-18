@@ -76,19 +76,30 @@ class DealersController extends Controller
 					*/
 
 		            // Build message to reply back
-		            $messages = [
-		                'type' => 'text',
-		                'text' => $dealers[0]->name_dealers . " / " . $dealers[0]->location . " / " . $dealers[0]->latitude . " / " . $dealers[0]->longitude,
-		                // 'title' => $name_dealers,
-		                // 'address' => $address,
-		                // 'latitude' => $lat,
-		                // 'longitude' => $lng,
-		            ];
+		            $array_dealers = array();
+
+		            foreach($dealers as $item){
+
+			            $message = [
+			                'type' => 'text',
+			                'text' => $item->name_dealers . " / " . $item->location . " / " . $item->latitude . " / " . $item->longitude,
+			                // 'title' => $name_dealers,
+			                // 'address' => $address,
+			                // 'latitude' => $lat,
+			                // 'longitude' => $lng,
+			            ];
+
+			            $array_dealers[] = $message;
+
+
+		            }
+
+
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
 		            $data = [
 		                'replyToken' => $replyToken,
-		                'messages' => [$messages , $messages , $messages , $messages , $messages]
+		                'messages' => $array_dealers
 		            ];
 		            $post = json_encode($data);
 		            $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
