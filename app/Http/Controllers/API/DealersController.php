@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Mylog;
+use App\Dealer;
 
 class DealersController extends Controller
 {
@@ -57,19 +58,17 @@ class DealersController extends Controller
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
 
-		            	if(!empty($lats) or !empty($lngs)) {
-		            		$sql = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lats) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lngs) ) + sin( radians($lats) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
-		            	}
+		            	if(!empty($lat) or !empty($lng)) {
+		            		$sql = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
-		            @foreach($dealers as $item)
+		            		$Query = request()->all();
+		            		
+		            	}
 
 		            // Build message to reply back
 		            $messages = [
-		                'type' => 'location',
-		                'title' => {{ $item->name_dealers }},
-		                'address' => {{ $item->location }},
-		                'latitude' => {{ $item->latitude }},
-		                'longitude' => {{ $item->longitude }},
+		                'type' => 'text',
+		                'title' => $Query,
 		            ];
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
@@ -77,8 +76,6 @@ class DealersController extends Controller
 		                'replyToken' => $replyToken,
 		                'messages' => [$messages , $messages , $messages , $messages , $messages]
 		            ];
-		            @endforeach
-		            
 		            $post = json_encode($data);
 		            $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		            $ch = curl_init($url);
