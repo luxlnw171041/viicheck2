@@ -58,18 +58,29 @@ class DealersController extends Controller
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
 
-		            	if(!empty($lat) or !empty($lng)) {
-		            		$sql = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
+		            $query = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
-		            		$Query = request()->all();
-		            		return response()->json($Query);
-		            		
-		            	
+		            $resource = mysqli_query($query) or die (“error”.mysqli_error());
+					$count_row = mysqli_num_rows($resource);
+					
+					if($count_row > 0) {
+						while($result =mysqli_fetch_array($resource)){
+						$name_dealers = $result[name_dealers];
+						$address = $result[location];
+						$distance = round($result[‘distance’],2);
+						$lat = $result[latitude];
+						$lng = $result[longitude];
+
+						}
+					}
 
 		            // Build message to reply back
 		            $messages = [
-		                'type' => 'text',
-		                'title' => $Query,
+		                'type' => 'location',
+		                'title' => $name_dealers,
+		                'address' => $address,
+		                'latitude' => $lat,
+		                'longitude' => $lng,
 		            ];
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
@@ -88,9 +99,6 @@ class DealersController extends Controller
 		            $result = curl_exec($ch);
 		            curl_close($ch);
 		            echo $result . "";
-
-		        		}
-		        		
 		        }
 		    }
 		}
