@@ -60,7 +60,7 @@ class DealersController extends Controller
 
 		            $query = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
-		            $resource = mysqli_query($query) or die (“error”.mysqli_error());
+		            $resource = mysqli_query($query);
 					$count_row = mysqli_num_rows($resource);
 
 					if($count_row > 0) {
