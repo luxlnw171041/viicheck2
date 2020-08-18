@@ -62,14 +62,13 @@ class DealersController extends Controller
 
 		            $resource = mysqli_query($query) or die (“error”.mysqli_error());
 					$count_row = mysqli_num_rows($resource);
-					
+
 					if($count_row > 0) {
 						while($result =mysqli_fetch_array($resource)){
-						$name_dealers = $result[name_dealers];
-						$address = $result[location];
-						$distance = round($result[‘distance’],2);
-						$lat = $result[latitude];
-						$lng = $result[longitude];
+						$name_dealers = $result['name_dealers'];
+						$address = $result['location'];
+						$lat = $result['latitude'];
+						$lng = $result['longitude'];
 
 						}
 					}
