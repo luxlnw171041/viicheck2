@@ -19,7 +19,7 @@ class DealersController extends Controller
 
 			$dealer = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lats) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lngs) ) + sin( radians($lats) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
-        	// return response()->json($dealer);
+        	return response()->json($dealer);
 
 		    echo "<pre>";
 		    print_r($dealer);
@@ -56,11 +56,26 @@ class DealersController extends Controller
 		            $text = $lat . " / " . $lng ;
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
+
+		            	if(!empty($lats) or !empty($lngs)) {
+		            		$sql = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lats) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lngs) ) + sin( radians($lats) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
+
+		            		$name_dealers = $request->input('name_dealers');
+		            		$location = $request->input('location');
+		            		$lat = $request->input('latitude');
+		            		$lng = $request->input('longitude');
+
+					        $name_dealers = Dealer::findOrFail($name_dealers);
+					        $location = Dealer::findOrFail($location);
+					        $lat = Dealer::findOrFail($latitude);
+					        $lng = Dealer::findOrFail($longitude);
+		            	}
+
 		            // Build message to reply back
 		            $messages = [
 		                'type' => 'location',
-		                'title' => "NAME",
-		                'address' => $text,
+		                'title' => $name_dealers,
+		                'address' => $location,
 		                'latitude' => $lat,
 		                'longitude' => $lng,
 		            ];
