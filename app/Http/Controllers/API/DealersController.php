@@ -57,23 +57,9 @@ class DealersController extends Controller
 		            $text = $lat . " / " . $lng ;
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
+
 		            //array of dealers
 		            $dealers = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
-
-		            /*
-		            $resource = mysqli_query($query);
-					$count_row = mysqli_num_rows($resource);
-
-					if($count_row > 0) {
-						while($result =mysqli_fetch_array($resource)){
-						$name_dealers = $result['name_dealers'];
-						$address = $result['location'];
-						$lat = $result['latitude'];
-						$lng = $result['longitude'];
-
-						}
-					}
-					*/
 
 		            // Build message to reply back
 		            $array_dealers = array();
@@ -81,12 +67,12 @@ class DealersController extends Controller
 		            foreach($dealers as $item){
 
 			            $message = [
-			                'type' => 'text',
-			                'text' => $item->name_dealers . " / " . $item->location . " / " . $item->latitude . " / " . $item->longitude,
-			                // 'title' => $name_dealers,
-			                // 'address' => $address,
-			                // 'latitude' => $lat,
-			                // 'longitude' => $lng,
+			                'type' => 'location',
+			                // 'text' => $item->name_dealers . " / " . $item->location . " / " . $item->latitude . " / " . $item->longitude,
+			                'title' => $item->name_dealers,
+			                'address' => $item->location,
+			                'latitude' => $item->latitude,
+			                'longitude' => $item->longitude,
 			            ];
 
 			            $array_dealers[] = $message;
