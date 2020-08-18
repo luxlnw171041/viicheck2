@@ -59,25 +59,17 @@ class DealersController extends Controller
 
 		            	if(!empty($lats) or !empty($lngs)) {
 		            		$sql = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lats) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lngs) ) + sin( radians($lats) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
-
-		            		$name_dealers = $request->input('name_dealers');
-		            		$location = $request->input('location');
-		            		$lat = $request->input('latitude');
-		            		$lng = $request->input('longitude');
-
-					        $name_dealers = Dealer::findOrFail($name_dealers);
-					        $location = Dealer::findOrFail($location);
-					        $lat = Dealer::findOrFail($latitude);
-					        $lng = Dealer::findOrFail($longitude);
 		            	}
+
+		            @foreach($dealers as $item)
 
 		            // Build message to reply back
 		            $messages = [
 		                'type' => 'location',
-		                'title' => $name_dealers,
-		                'address' => $location,
-		                'latitude' => $lat,
-		                'longitude' => $lng,
+		                'title' => {{ $item->name_dealers }},
+		                'address' => {{ $item->location }},
+		                'latitude' => {{ $item->latitude }},
+		                'longitude' => {{ $item->longitude }},
 		            ];
 		            // Make a POST Request to Messaging API to reply to sender
 		            $url = 'https://api.line.me/v2/bot/message/reply';
@@ -85,6 +77,8 @@ class DealersController extends Controller
 		                'replyToken' => $replyToken,
 		                'messages' => [$messages , $messages , $messages , $messages , $messages]
 		            ];
+		            @endforeach
+		            
 		            $post = json_encode($data);
 		            $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		            $ch = curl_init($url);
