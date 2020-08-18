@@ -78,7 +78,7 @@ class DealersController extends Controller
 		            // Build message to reply back
 		            $messages = [
 		                'type' => 'text',
-		                'text' => $dealers[0]->name_dealers . " / " . $dealers[0]->$address . " / " . $dealers[0]->$lat . " / " . $lng,
+		                'text' => $dealers[0]->name_dealers . " / " . $dealers[1]->address . " / " . $dealers[2]->lat . " / " . $dealers[3]->lng,
 		                // 'title' => $name_dealers,
 		                // 'address' => $address,
 		                // 'latitude' => $lat,
