@@ -57,9 +57,10 @@ class DealersController extends Controller
 		            $text = $lat . " / " . $lng ;
 		            // Get replyToken
 		            $replyToken = $event['replyToken'];
+		            //array of dealers
+		            $dealers = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
 
-		            $query = DB::select("SELECT name_dealers,location,latitude,longitude,( 3959 * acos( cos( radians($lat) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( latitude ) ) ) ) AS distance FROM dealers  HAVING distance < 2000 ORDER BY distance LIMIT 0 , 5", []);
-
+		            /*
 		            $resource = mysqli_query($query);
 					$count_row = mysqli_num_rows($resource);
 
@@ -72,11 +73,12 @@ class DealersController extends Controller
 
 						}
 					}
+					*/
 
 		            // Build message to reply back
 		            $messages = [
 		                'type' => 'text',
-		                'text' => $name_dealers . " / " . $address . " / " . $lat . " / " . $lng,
+		                'text' => $dealers[0]->name_dealers . " / " . $dealers[0]->$address . " / " . $dealers[0]->$lat . " / " . $lng,
 		                // 'title' => $name_dealers,
 		                // 'address' => $address,
 		                // 'latitude' => $lat,
