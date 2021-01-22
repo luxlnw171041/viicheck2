@@ -49,7 +49,7 @@
                                       <option value="">กรุณาเลือกจังหวัด</option>
                                     </select>
                                   </div>
-                                  <!-- <div>
+                                  <div>
                                     <select class="form-control" id="input_amphoe" onchange="showDistricts()">
                                       <option value="">กรุณาเลือกอำเภอ</option>
                                     </select>
@@ -61,7 +61,7 @@
                                   </div>
                                   <div>
                                     <input class="form-control" id="input_zipcode" placeholder="รหัสไปรษณีย์" />
-                                  </div> -->
+                                  </div>
                               </div>
 
                                 <script>
