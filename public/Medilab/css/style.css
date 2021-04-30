@@ -771,7 +771,7 @@ section {
 .about .video-box {
   background: url("../img/about.jpg") center center no-repeat;
   background-size: cover;
-  min-height: 500px;
+  min-height: 875px;
 }
 
 .about .play-btn {
@@ -1720,7 +1720,6 @@ section {
   padding: 8px 0;
   margin-right: 4px;
   border-radius: 50%;
-  text-align: center;
   width: 36px;
   height: 36px;
   transition: 0.3s;
