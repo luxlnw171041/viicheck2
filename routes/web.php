@@ -12,14 +12,24 @@
 */
 use App\Dealer;
 
+// Route::get('/', function () {
+//     $dealers = Dealer::limit(3)->get();
+    
+//     return view('home',compact('dealers'));
+// });
+// Route::get('/welcome', function () {
+    
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    $dealers = Dealer::limit(3)->get();
     
-    return view('home',compact('dealers'));
+    return view('home_page');
 });
-Route::get('/welcome', function () {
+
+Route::get('/home', function () {
     
-    return view('welcome');
+    return view('home_page');
 });
 
 Route::get('/terms_of_service', function () {
@@ -32,7 +42,7 @@ Route::resource('profiles', 'ProfilesController');
 Route::resource('services', 'ServicesController');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/b', function () {
     return view('b');
