@@ -27,13 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('Medilab/css/style.css') }}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Medilab - v4.1.0
-  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
 </head>
 
 <body>
@@ -163,7 +157,7 @@
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+          <div style="border: 1px solid red; border-radius: 20px;" class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
             <a href="https://youtu.be/eHT1gJ0-FQg" class="glightbox play-btn mb-4"></a>
           </div>
 
@@ -329,62 +323,68 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-4 col-md-6 align-items-stretch">
             <a href="https://line.me/R/ti/p/%40702ytkls">
               <div class="icon-box">
                 <div class="icon"><i class="fas fa-id-card-alt"></i></div>
                 <h4><a href="https://line.me/R/ti/p/%40702ytkls">ติดต่อเจ้าของรถ</a></h4>
-                <p>ติอต่อเจ้าของรถได้ง่ายผ่าน Social เพียงแค่สแกน QR-CODE บนสติกเกอร์</p>
+                <p>ติดต่อเจ้าของรถได้ง่ายผ่าน Line</p>
+                <p>เพียงแค่สแกน QR-CODE บนสติ๊กเกอร์</p>
               </div>
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="col-lg-4 col-md-6  align-items-stretch mt-4 mt-md-0">
             <a href="https://line.me/R/ti/p/%40702ytkls">
               <div class="icon-box">
                 <div class="icon"><i class="fas fa-car-crash"></i></div>
                 <h4><a href="https://line.me/R/ti/p/%40702ytkls">เหตุฉุกเฉิน</a></h4>
-                <p>ติดต่อแจ้งเหตุฉุกเฉิน 24 ชม. เพียงแค่กดปุ่มก็จะมีเบอร์ที่จำเป็นแสดงขึ้นมา</p>
+                <p>ติดต่อแจ้งเหตุฉุกเฉิน 24 ชั่วโมง</p>
+                <p>เพียงแค่กดปุ่มก็จะมีเบอร์ที่จำเป็นแสดงขึ้นมา</p>
               </div>
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="col-lg-4 col-md-6  align-items-stretch mt-4 mt-lg-0">
             <a href="https://line.me/R/ti/p/%40702ytkls">
               <div class="icon-box">
                 <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
                 <h4><a href="https://line.me/R/ti/p/%40702ytkls">แจ้งเตือน พรบ./ประกัน</a></h4>
-                <p>หายห่วงเรื่องลืมต่ออายุ พรบ./ประกัน ระบบจะแจ้งเตือนเมื่อใกล้วันครบกำหนด</p>
+                <p>หายห่วงเรื่องลืมต่ออายุ พรบ./ประกัน</p>
+                <p>ระบบจะแจ้งเตือนเมื่อใกล้วันครบกำหนด</p>
               </div>
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="col-lg-4 col-md-6 align-items-stretch mt-4">
             <a href="https://market.viicheck.com/middle_price_car">
               <div class="icon-box">
                 <div class="icon"><i class="fas fa-clipboard-check"></i></div>
                 <h4><a href="https://market.viicheck.com/middle_price_car">เช็คราคากลางกรมขนส่ง</a></h4>
-                <p>เมื่อคิดจะขายหรือขอสินเชื่อ เช็คราคาได้เลยข้อมูลจากกรมการขนส่งทางบก (พ.ศ.2564)</p>
+                <p>เมื่อคิดจะขายหรือขอสินเชื่อ</p>
+                <p>ก็สามารถเช็คราคากลางได้ตลอด</p>
               </div>
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="col-lg-4 col-md-6  align-items-stretch mt-4">
             <a href="https://line.me/R/ti/p/%40702ytkls">
               <div class="icon-box">
                 <div class="icon"><i class="fas fa-bullhorn"></i></div>
                 <h4><a href="https://line.me/R/ti/p/%40702ytkls">โปรโมชั่นเกี่ยวกับยานพาหนะ</a></h4>
-                <p>โปรโมชั่นด้านยานพาหนะมากมายที่รอให้คุณเป็นเจ้าของ รีบเลยก่อนหมดเวลา !</p>
+                <p>โปรโมชั่นมากมายที่รอให้คุณใช้บริการ</p>
+                <p>รีบเลยก่อนหมดเวลา !</p>
               </div>
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="col-lg-4 col-md-6  align-items-stretch mt-4">
             <a href="https://line.me/R/ti/p/%40702ytkls">
               <div class="icon-box">
                 <div class="icon"><i class="fas fa-user-lock"></i></div>
                 <h4><a href="https://line.me/R/ti/p/%40702ytkls">เก็บรวบรวมข้อมูล</a></h4>
-                <p>รวบรวมข้อมูลของคุณไว้ที่เดียว สะดวก รวดเร็ว ง่ายต่อการใช้งาน ที่สำคัญปลอดภัยด้วยการรักษาความเป็นส่วนตัวของผู้ใช้บริการ</p>
+                <p>รวบรวมข้อมูลของคุณไว้ที่เดียว สะดวก รวดเร็ว ง่ายต่อการใช้งาน</p>
+                <p>ที่สำคัญปลอดภัยด้วยการรักษาความเป็นส่วนตัวของผู้ใช้บริการ</p>
               </div>
             </a>
           </div>
