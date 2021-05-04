@@ -266,15 +266,6 @@
             </div>
           </div>
           <!-- ข้อดีของ VMOVE ซ่อนไว้ -->
-
-          <div class="col-lg-4 col-md-4">
-            <div class="gallery-item">
-              <a href="{{ asset('/img/ขั้นตอนการลงทะเบียน/1 how to ลงทะเบียน 1920x1080-03.jpg') }}" class="galelry-lightbox">
-                <img src="{{ asset('/img/ขั้นตอนการลงทะเบียน/1 how to ลงทะเบียน 1920x1080-03.jpg') }}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
           <div class="col-lg-4 col-md-4">
             <div class="gallery-item">
               <a href="{{ asset('/img/ขั้นตอนการลงทะเบียน/2 how to ลงทะเบียน 1920x1080-01.jpg') }}" class="galelry-lightbox">
@@ -311,6 +302,14 @@
             <div class="gallery-item">
               <a href="{{ asset('/img/ขั้นตอนการลงทะเบียน/6-how-to-ลงทะเบียน-1920x1080-06-v3.jpg') }}" class="galelry-lightbox">
                 <img src="{{ asset('/img/ขั้นตอนการลงทะเบียน/6-how-to-ลงทะเบียน-1920x1080-06-v3.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ asset('/img/ขั้นตอนการลงทะเบียน/7 how to ลงทะเบียน 1920x1080 cre v2-06.jpg') }}" class="galelry-lightbox">
+                <img src="{{ asset('/img/ขั้นตอนการลงทะเบียน/7 how to ลงทะเบียน 1920x1080 cre v2-06.jpg') }}" alt="" class="img-fluid">
               </a>
             </div>
           </div>
