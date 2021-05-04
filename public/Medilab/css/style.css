@@ -717,7 +717,7 @@ section {
 }
 
 .about .icon-box {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .about .icon-box .icon {
@@ -771,7 +771,7 @@ section {
 .about .video-box {
   background: url("../img/about.jpg") center center no-repeat;
   background-size: fit;
-  min-height: 500px;
+  min-height: 650px;
 }
 
 .about .play-btn {
