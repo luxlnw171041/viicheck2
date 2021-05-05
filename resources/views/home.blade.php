@@ -40,7 +40,7 @@
 
                           <div class="col-md-4 " style="position:absolute;" >
                             <div class="px-4" style=" background: #fff;">
-                              <h1 class="mt-5" style="font-size:2em;" data-aos="fade-up"> ปฏิวัติการจัดเก็บข้อมูลของยานพาหนะคุณ </h1>
+                              <h1 class="mt-5" style="font-size:2em;" data-aos="fade-up">ปฏิวัติการจัดเก็บข้อมูลของยานพาหนะคุณ </h1>
                               <h5 class="text-black-50 mt-4" style="font-size:1em;"  data-aos="fade-up" data-aos-delay="400">ไม่ว่าคุณจะเป็นองค์กรบริษัทหรือบุคคลทั่วไปที่อยากมีการจัดเก็บข้อมูลของยานพาหนะที่ได้มาตรฐาน เพื่อทำให้ชีวิตของคุณง่ายสะดวกรวดเร็ว ทั้งหมดอยู่ที่นี่แล้ว</h5>
                               <div class="py-3">
                                 <label>ค้นหาศูนย์บริการที่ใกล้คุณ</label>
