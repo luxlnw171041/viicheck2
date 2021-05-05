@@ -37,6 +37,11 @@ Route::get('/terms_of_service', function () {
     return view('terms_of_service');
 });
 
+Route::get('/privacy_policy', function () {
+    
+    return view('privacy_policy');
+});
+
 Route::resource('cars', 'CarsController');
 Route::resource('profiles', 'ProfilesController');
 Route::resource('services', 'ServicesController');
