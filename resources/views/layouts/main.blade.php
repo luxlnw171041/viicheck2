@@ -128,6 +128,9 @@
             <div class="col-1">
                 <img width="100%" src="{{ asset('/img/logo/js100.png') }}">
             </div>
+            <div class="col-1">
+                <img width="100%" src="{{ asset('/img/logo/Southern_Coffee.png') }}">
+            </div>
           </div>
         </div>
         <div class="copyright">
